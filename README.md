@@ -6,7 +6,7 @@ Clone this repo to somewhere on disk.
 
 Create a new project:
 ```shell
-npm install --save-dev assemblyscript
+npm install --save-dev @higress/proxy-runtime
 npx asinit .
 ```
 
