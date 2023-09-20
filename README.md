@@ -1,3 +1,5 @@
+## Forked from [@solo-io/proxy-runtime](https://github.com/solo-io/proxy-runtime)
+
 How to use the SDK:
 
 
@@ -16,12 +18,12 @@ add `--use abort=abort_proc_exit` to the `asc` in packages.json. for example:
     "asbuild:release": "asc assembly/index.ts -b build/optimized.wasm --use abort=abort_proc_exit -t build/optimized.wat --sourceMap --optimize",
 ```
 
-Add `"@solo-io/proxy-runtime": "file:/home/yuval/Projects/solo/proxy-assemblyscript"` to your dependencies.
+Add `"@higress-group/proxy-runtime": "file:/home/yuval/Projects/higress/proxy-assemblyscript"` to your dependencies.
 run `npm install`
 
 # using NPM
 
-Just include the `@solo-io/proxy-runtime` package.
+Just include the `@higress-group/proxy-runtime` package.
 
 # Hello, World
 
@@ -29,8 +31,8 @@ Just include the `@solo-io/proxy-runtime` package.
 Copy this into assembly/index.ts:
 
 ```ts
-export * from "@solo-io/proxy-runtime/proxy"; // this exports the required functions for the proxy to interact with us.
-import { RootContext, Context, registerRootContext, FilterHeadersStatusValues, stream_context } from "@solo-io/proxy-runtime";
+export * from "@higress-group/proxy-runtime/proxy"; // this exports the required functions for the proxy to interact with us.
+import { RootContext, Context, registerRootContext, FilterHeadersStatusValues, stream_context } from "@higress-group/proxy-runtime";
 
 class AddHeaderRoot extends RootContext {
   createContext(context_id: u32): Context {
